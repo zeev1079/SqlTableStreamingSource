@@ -25,7 +25,8 @@ The project is based on Apache spark for the micro Batch streaming, and HBase to
 
  1. change the src/main/resource/application.conf based on your HBase settings and sql settings
  2. in the src/main/zeev/kafka/producers - modify the kafka brokers and any input you want to add to the microBatchReader source
- 3. run/deploy it in anyway you want, standalone, cluster mode...
+ 3. set and define your checkpoint location
+ 4. run/deploy it in anyway you want, standalone, cluster mode...
 
 
 ### Installing/usage
@@ -33,7 +34,7 @@ The project is based on Apache spark for the micro Batch streaming, and HBase to
 
 
 ## Built With
-Apache Spark, Scala, Hbase, Sql
+Apache Spark, Scala, Hbase, Sql, HDFS
 
 ## Authors
 Zeev Feldbeine
