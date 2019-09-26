@@ -14,7 +14,7 @@ The project is based on Apache spark for the micro Batch streaming, and HBase to
  * src/main/zeev/sql/util - contains the logic for the sql configurations and connections, including dao to query the sql tables
  * src/main/zeev/producers - basic Spark2.4 struct streaming to readStream from the custom sql table source, and writeStream to Kafka
  * src/main/zeev/spark/streaming - contains all the objects and classes(MicroBatchReader, DataReaderFactories, DataReader, DataReaderFactory, Custom Offsets, and etc  ) to support and implement a custom Spark2.4 sturct streaming. The following is more detail explanation:
-     1. src/main/zeev/spark/streaming/offsets - this custom implementation fo the super trait of v2.reader.streaming.Offset, it is essentially an abstract representation of progress through the microBatchReader, or continuosReader. During execution the offsets will be logged and used as restart checkpoints. this will also be used to store into HBase as well.
+     1. src/main/zeev/spark/streaming/offsets - this custom implementation for the super trait of v2.reader.streaming.Offset, it is essentially an abstract representation of progress through the microBatchReader, or continuosReader. During execution the offsets will be logged and used as restart checkpoints. this will also be used to store into HBase as well.
      2. src/main/spark/streaming/sources - it will contain the custom micro batch readers classes and companion objects, the classes will extend DataSourceV2, MicroBatchReadSupport, and DataSourceRegister. this will be starting point and the class that the kafka producer is referring in the ReadStream.
      3. src/main/zeev/spark/streaming/batchreaders - implementation of the microBatchReader, it contains all the logic of getting data from sql tables, storing the offsets, restarting from checkpoints, and creating RDDs or DataReaderFactories for spark
      4. src/main/zeev/spark/streaming/partitionreaders - will contain all the custom inputpartitionReader(in spark2.3 it used to be called DataReaderFactory), and its is responsible for creating the actual data reader of one RDD partition
@@ -30,7 +30,7 @@ The project is based on Apache spark for the micro Batch streaming, and HBase to
 
 
 ### Installing/usage
-1. install and import the sbt libaries
+1. install and import the sbt libraries
 
 
 ## Built With
