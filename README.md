@@ -2,7 +2,7 @@
 
 ## Upcoming Medium tutorial... 
 
-Spark2.4 custom Spark streaming from any Sql table to Kafka. 
+Spark2.4 distributed, fault tolerant and scalable custom Spark streaming from any Sql table to Kafka. 
 The project is based on Apache spark for the micro Batch streaming, and HBase to store and retrieve the offsets.
 
 ## Project sturcture
