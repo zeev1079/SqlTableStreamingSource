@@ -18,7 +18,7 @@ The project is based on Apache spark for the micro Batch streaming, and HBase to
      2. src/main/spark/streaming/sources - it will contain the custom micro batch readers classes and companion objects, the classes will extend DataSourceV2, MicroBatchReadSupport, and DataSourceRegister. this will be starting point and the class that the kafka producer is referring in the ReadStream.
      3. src/main/zeev/spark/streaming/batchreaders - implementation of the microBatchReader, it contains all the logic of getting data from sql tables, storing the offsets, restarting from checkpoints, and creating RDDs or DataReaderFactories for spark
      4. src/main/zeev/spark/streaming/partitionreaders - will contain all the custom inputpartitionReader(in spark2.3 it used to be called DataReaderFactory), and its is responsible for creating the actual data reader of one RDD partition
-     5. src/main/zeev/spark/streaming/inputpartitions - its is InputPartition(used to be called in 2.3 DataReaderFactory), and its responsible for creating the actual partition readers.
+     5. src/main/zeev/spark/streaming/inputpartitions - it is InputPartition(used to be called in 2.3 DataReaderFactory), and its responsible for creating the actual partition readers.
 
 
 ## Getting Started
